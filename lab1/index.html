@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Be Surfing Landing Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* hero section*/
+    .hero{
+      position:relative;
+      height:520px;
+      background:url('surfing2.jpg') center/cover no-repeat;
+      color:white;
+    }
+
+    /* Top nav above the image */
+    .nav{
+      position:absolute;
+      top:18px;
+      left:0; right:0;
+      padding:0 28px;
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
+
+    /* Brand on left */
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:800;
+      letter-spacing:.25em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+    .brand .be{ color:#20e6e6; }
+    .brand .pill{
+      display:inline-block;
+      border:4px solid #20e6e6;
+      border-radius:999px;
+      padding:.25rem 1.5rem;
+      line-height:1;
+    }
+
+    /* Center menu */
+    .menu{
+      list-style:none;
+      margin:0 auto;
+      padding:0;
+      display:flex;
+      gap:40px;
+    }
+    .menu a{
+      color:white;
+      text-decoration:none;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.25em;
+      font-size:16px;
+      white-space:nowrap;
+    }
+    .menu a:hover{ opacity:.8; }
+
+    /* Right */
+    .buy{
+      color:#20e6e6;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.25em;
+      text-decoration:none;
+      font-size:16px;
+      white-space:nowrap;
+    }
+
+    /* Hero text on image */
+    .hero-text{
+      position:absolute;
+      right:10%;
+      top:45%;
+      transform:translateY(-50%);
+      max-width:540px;
+      text-align:right;
+    }
+    .hero-text h1{
+      margin:0 0 6px;
+      font-size:36px;
+      line-height:1.2;
+      letter-spacing:.05em;
+    }
+    .hero-text p{
+      margin:0;
+      letter-spacing:.1em;
+      font-weight:700;
+    }
+
+    /* SECOND SECTION */
+    .section {
+      width: 100%;
+      overflow: hidden; 
+      background-color: #f9f9f9;
+      padding: 20px 0;
+    }
+
+    .left {
+      float: left;
+      width: 50%;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .left img {
+      width: 90%;
+      height: auto;
+    }
+
+    .right {
+      float: right;
+      width: 45%;
+      padding: 20px;
+      background-color: white;
+      box-sizing: border-box;
+      text-align: left;
+    }
+
+    .right h2 {
+      color: #4B2B5B;
+      text-transform: uppercase;
+      margin-top: 0;
+    }
+
+    .right h3 {
+      color: grey;
+      font-weight: normal;
+      margin-top: 0;
+    }
+
+    .right p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: aqua;
+      color: black;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+
+    .button:hover {
+      background-color: #00dddd;
+    }
+
+    /* THIRD SECTION */
+    .section3 {
+      width: 100%;
+      overflow: hidden;           
+      background-color: #f9f9f9;
+      padding: 20px 0;
+    }
+
+    .section3 .left {
+      float: left;
+      width: 45%;                
+      padding: 20px;
+      background-color: white;
+      box-sizing: border-box;       
+      text-align: left;
+    }
+
+    .section3 .left h4{
+      color: purple;
+      text-transform: uppercase;
+      margin-top: 0;
+    }
+
+    .section3 .left p{
+      color: #555;                  
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .section3 .Right {
+      float: right;
+      width: 50%;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .section3 .Right img {
+      width: 90%;
+      height: auto;
+      display: inline-block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <div class="hero">
+    <nav class="nav">
+      <div class="brand">
+        <span class="be">BE</span>
+        <span class="pill">SURFING</span>
+      </div>
+
+      <ul class="menu">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">RENT A BOARD</a></li>
+        <li><a href="#">SCHOOL</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+
+      <a class="buy" href="#">BUY NOW</a>
+    </nav>
+
+    <div class="hero-text">
+      <h1>HAWAII BESURFING RESORT</h1>
+      <p>SPEND YOUR VACATION WITH US</p>
+    </div>
+  </div>
+
+  <!-- SECOND SECTION -->
+  <div class="section">
+    <div class="left">
+      <img src="surfing3.jpg" alt="Sun and Big Waves">
+    </div>
+
+    <div class="right">
+      <h2>SUN &amp; BIG WAVES</h2>
+      <h3>Surfing , an amazing sport for tourists</h3>
+      <p>
+       Surfing is a surface water sport in which an individual, 
+       a surfer (or two in tandem surfing), uses a board to ride on
+        the forward section, or face, of a moving wave of water, 
+        which usually carries the surfer towards the shore. Waves suitable 
+        for surfing are primarily found on ocean shores, but can also be
+         found as standing waves in the open ocean, in lakes, in rivers
+          in the form of a tidal bore, or wave pools. 
+      </p>
+      <a href="#" class="button">Read more</a>
+    </div>
+  </div>
+
+  <!-- THIRD SECTION -->
+  <div class="section3">
+    <div class="left">
+      <h4>RENT A BOAT</h4>
+      <p>
+        To rent a boat you have to contact the manager, 
+        select the type of boat you want to rent and pay 
+        the half amount first. Also, selecting the 
+        timing of your activity is crucial while renting.
+      </p>
+      <a href="#" class="button">Read more</a>
+    </div>
+
+    <div class="Right">
+      <img src="surfing4.jpg" alt="RENT A BOAT">
+    </div>
+  </div>
+
+</body>
+</html>
