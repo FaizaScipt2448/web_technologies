@@ -1,0 +1,38 @@
+:root{
+  --bg:#f7f7f9; --border:#e5e5e5; --text:#222; --muted:#666;
+  --accent:#4b7bec; --danger:#ef4444;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
+header{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--border);background:#fff}
+h1{font-size:18px;margin:0}
+h2{font-size:16px;margin:0 0 8px}
+main{display:grid;grid-template-columns:1fr 2fr;gap:16px;padding:16px;max-width:1100px;margin:0 auto}
+.panel{background:#fff;border:1px solid var(--border);border-radius:8px;padding:12px}
+
+label{display:block;font-size:14px;margin:8px 0}
+input,textarea{width:100%;padding:8px;border:1px solid var(--border);border-radius:6px;font-size:14px}
+pre{margin:.25rem 0;padding:.5rem;background:#fafafa;border:1px dashed var(--border);border-radius:6px}
+.muted{color:var(--muted);display:block;margin-bottom:6px}
+
+button{padding:8px 12px;border:1px solid var(--accent);background:var(--accent);color:#fff;border-radius:6px;cursor:pointer}
+button.secondary{background:#fff;color:var(--accent)}
+button.danger{border-color:var(--danger);background:var(--danger)}
+.row{display:flex;gap:8px;margin-top:8px}
+.note{color:var(--muted);font-size:12px;margin-top:8px}
+#msg{margin-top:8px;font-size:13px}
+
+#cartsTable{width:100%;border-collapse:collapse}
+#cartsTable th,#cartsTable td{border-top:1px solid var(--border);padding:8px;vertical-align:top;text-align:left}
+#cartsTable thead th{border-top:none;background:#fafafa}
+
+.products-list{margin:0;padding-left:18px}
+.products-list li{margin:2px 0}
+.badge{display:inline-block;min-width:26px;text-align:center;padding:2px 6px;border-radius:999px;background:#eef;border:1px solid #dde;color:#334}
+
+@media (max-width: 800px){
+  main{grid-template-columns:1fr}
+  #cartsTable thead{display:none}
+  #cartsTable tr{display:grid;grid-template-columns:80px 1fr;gap:6px;border:1px solid var(--border);border-radius:8px;margin-bottom:8px;padding:8px}
+  #cartsTable td{border:none;padding:4px}
+}

@@ -8,13 +8,14 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      background:#5b0f53;
     }
 
     /* hero section*/
     .hero{
       position:relative;
-      height:520px;
-      background:url('surfing2.jpg') center/cover no-repeat;
+      height:710px;
+      background:url('https://themes.muffingroup.com/be/surfing/wp-content/uploads/2015/07/home_surfing_slider.jpg') center/cover no-repeat;
       color:white;
     }
 
@@ -79,129 +80,396 @@
     }
 
     /* Hero text on image */
-    .hero-text{
-      position:absolute;
-      right:10%;
-      top:45%;
-      transform:translateY(-50%);
-      max-width:540px;
-      text-align:right;
-    }
-    .hero-text h1{
-      margin:0 0 6px;
-      font-size:36px;
-      line-height:1.2;
-      letter-spacing:.05em;
-    }
-    .hero-text p{
-      margin:0;
-      letter-spacing:.1em;
-      font-weight:700;
-    }
+    .hero-text {
+  position: absolute;
+  left: 58%;
+  top: 45%;
+   left: 65%;   /* more right */
+  top: 55%;    /* more down */
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-align: left;
+}
 
-    /* SECOND SECTION */
+.hero-text h1 {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: .07em;
+  margin: 0 0 14px;
+  text-transform: uppercase;
+}
+
+.hero-text p {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: .25em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+
+    /* ============ SECOND SECTION (updated to match screenshot) ============ */
     .section {
       width: 100%;
-      overflow: hidden; 
-      background-color: #f9f9f9;
-      padding: 20px 0;
+      overflow: hidden;                 /* clears floats */
+      background-color: #f3f3f3;        /* light grey bg like screenshot */
+      padding: 20px ;
     }
 
-    .left {
+    .section .left {
       float: left;
-      width: 50%;
-      text-align: center;
+      width: 65%;
+      text-align: right;                /* push image to the middle edge */
       box-sizing: border-box;
     }
-
-    .left img {
-      width: 90%;
+    .section .left img {
+      width: 100%;
       height: auto;
+      display: block;
+      margin: 0 0 0 auto;               /* align image to the right edge */
     }
 
-    .right {
+    .section .right {
       float: right;
-      width: 45%;
-      padding: 20px;
-      background-color: white;
+      width: 30%;
+      background-color: #ffffff;        /* white card */
+      padding: 36px 32px;
+      padding-top: 150px;   /* increased vertical space */
+      padding-bottom: 150px;
+      margin-right: 40px;               /* space from page edge */
+      margin-top: 0;
+      margin-bottom: 0;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
       box-sizing: border-box;
-      text-align: left;
+      text-align: center;
     }
-
-    .right h2 {
-      color: #4B2B5B;
+    .section .right h2 {
+      color: #4B2B5B;                   /* purple */
       text-transform: uppercase;
-      margin-top: 0;
+      letter-spacing: .1em;
+      margin: 6px 0 8px;
     }
-
-    .right h3 {
-      color: grey;
+    .section .right h3 {
+      color: #9a8fa6;                   /* soft grey-purple */
       font-weight: normal;
-      margin-top: 0;
+      margin: 0 0 16px;
     }
-
-    .right p {
+    .section .right p {
       color: #555;
-      line-height: 1.6;
+      line-height: 1.8;
+      margin: 0 auto 18px;
     }
-
-    .button {
+    .section .button {
       display: inline-block;
-      background-color: aqua;
-      color: black;
-      padding: 10px 20px;
+      background-color: #1ff5ea;        /* bright aqua */
+      color: #0b0b0b;
+      padding: 12px 28px;
       text-decoration: none;
       font-weight: bold;
-      margin-top: 10px;
-      border-radius: 5px;
+      letter-spacing: .15em;
+      border-radius: 8px;
     }
+    .section .button:hover { background-color: #12e6dc; }
 
-    .button:hover {
-      background-color: #00dddd;
-    }
+ /* THIRD SECTION */
+.section3 {
+  width: 100%;
+  overflow: hidden;
+  background-color: white; /* ✅ Set to white (not brown) */
+  padding: 0;
+  margin: 0;
+}
 
-    /* THIRD SECTION */
-    .section3 {
-      width: 100%;
-      overflow: hidden;           
-      background-color: #f9f9f9;
-      padding: 20px 0;
-    }
 
-    .section3 .left {
-      float: left;
-      width: 45%;                
-      padding: 20px;
-      background-color: white;
-      box-sizing: border-box;       
-      text-align: left;
-    }
+/* Left white info box */
+.section3 .left {
+  float: left;
+  width: 20%;
+  padding: 120px 60px;  /* ✅ increased height (first number = vertical space) */
+  background-color: white;
+  box-sizing: border-box;
+  text-align: center;
+  
+}
 
-    .section3 .left h4{
-      color: purple;
-      text-transform: uppercase;
-      margin-top: 0;
-    }
 
-    .section3 .left p{
-      color: #555;                  
-      line-height: 1.6;
-      margin: 0;
-    }
+/* Tiny wave line (simple bar) */
+.section3 .left .wave{
+  width: 80px;
+  height: 6px;
+  background: #20e6e6;     /* aqua */
+  border-radius: 999px;
+  margin: 10px auto 24px;  /* centered with space below */
+}
 
-    .section3 .Right {
-      float: right;
-      width: 50%;
-      text-align: center;
-      box-sizing: border-box;
-    }
+/* Title */
+.section3 .left h4{
+  color:#4B2B5B;           /* purple */
+  text-transform: uppercase;
+  letter-spacing:.18em;     /* spaced letters like screenshot */
+  font-size:42px;           /* big */
+  margin: 0 0 18px;
+}
 
-    .section3 .Right img {
-      width: 90%;
-      height: auto;
-      display: inline-block;
-      margin: 0 auto;
-    }
+/* Paragraph */
+.section3 .left p{
+  color:#666;
+  line-height:1.9;
+  max-width: 520px;
+  margin: 0 auto 22px;     /* center block of text */
+}
+
+/* Button (reuse your .button class; ensure it centers) */
+.section3 .left .button{
+  display:inline-block;
+  margin: 10px auto 0;
+}
+
+/* Right image */
+.section3 .Right {
+  float: right;
+  width: 62%;
+  background:#f3f3f3;  
+  text-align: center;
+  box-sizing: border-box;
+  padding:60px 0; /* ✅ extra height so no gap */
+  margin-right: 0; /* ✅ remove empty right spacing */
+}
+
+.section3 .Right img {
+  width: 100%;
+  height: 500px;
+  display: block; /* removes inline spacing */
+  margin:0 16px;  
+  display: inline-block;
+}
+ /* Section 4 - Video */
+.section4 {
+  width: 100%;
+  background: white;
+  overflow: hidden;
+  padding: 60px 0;
+}
+
+/* Left image */
+.left-video {
+  float: left;
+  width: 55%;
+}
+
+.left-video img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+/* Right text area */
+.right-video {
+  float: right;
+  width: 40%;
+  padding: 60px 40px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.right-video .wave {
+  width: 60px;
+  height: 6px;
+  background: #20e6e6;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+/* Heading */
+.right-video h4 {
+  font-size: 42px;
+  text-transform: uppercase;
+  color: #4B2B5B;
+  margin: 10px 0 30px;
+}
+
+/* Text */
+.right-video p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* Button */
+.right-video .button {
+  display: inline-block;
+  margin-top: 10px;
+}
+.section5{
+  width:100%;
+  background-image:url("https://themes.muffingroup.com/be/surfing/wp-content/uploads/2015/07/home_surfing_section_list.jpg");
+  background-size:cover;
+  background-position:right center;   /* woman on the right like the demo */
+  padding:120px 0 140px;              /* top/bottom space like screenshot */
+  color:#4B2B5B;
+  clear:both;                         /* safety clear */
+}
+
+.section5 .container{
+  width:85%;
+  margin:0 auto;
+  text-align:left;
+}
+
+.section5 h2{
+  font-size:46px;
+  letter-spacing:.15em;
+  margin:0 0 12px;
+}
+
+.section5 .subtitle{
+  font-size:18px;
+  color:#6b6b6b;
+  margin:0 0 60px;
+}
+
+/* 2×2 grid */
+.section5 .features{
+  display:flex;
+  flex-wrap:wrap;
+  gap:60px 80px;            /* row / column gaps */
+}
+
+.section5 .feature-box{
+  width:42%;                /* two per row */
+  display:flex;
+  gap:18px;
+  align-items:flex-start;
+  color:#6b6b6b;
+}
+
+.section5 .feature-box .icon{
+  font-size:42px;
+  line-height:1;
+  color:#20e6e6;            /* aqua icon like the demo */
+}
+
+.section5 .feature-box h3{
+  margin:0 0 10px;
+  color:#4B2B5B;
+  font-size:26px;
+  letter-spacing:.1em;
+}
+
+.section5 .feature-box p{
+  margin:0;
+  line-height:1.9;
+}
+
+/* SECTION 6 */
+.section6{
+  background:#fff;
+  color:#4B2B5B;
+  width:100%;
+}
+
+/* CTA bar */
+.section6 .cta-bar{
+  background:#6efaf0;              /* bright aqua band */
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:28px 8%;
+}
+.section6 .cta-bar h3{
+  margin:0;
+  font-size:36px;
+  letter-spacing:.15em;
+}
+.section6 .cta-bar .cta-btn{
+  background:#fff;
+  color:#4B2B5B;
+  text-decoration:none;
+  padding:12px 24px;
+  border-radius:8px;
+  font-weight:600;
+  box-shadow:0 0 0 2px rgba(0,0,0,0.04) inset;
+}
+
+/* Link columns */
+.section6 .footer-links{
+  width:84%;
+  margin:50px auto 60px;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:40px 60px;
+}
+.section6 .footer-links .col h4{
+  margin:0 0 16px;
+  font-size:20px;
+  font-weight:700;
+}
+.section6 .footer-links ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.section6 .footer-links li{
+  margin:10px 0;
+  position:relative;
+  padding-left:14px;
+}
+.section6 .footer-links li::before{
+  content:"▸";
+  position:absolute;
+  left:0;
+  top:0;
+  color:#7096d6;                   /* soft blue arrow */
+}
+.section6 .footer-links a{
+  color:#7096d6;
+  text-decoration:none;
+}
+.section6 .footer-links a:hover{
+  text-decoration:underline;
+}
+
+/* Copyright line */
+.section6 .copyright{
+  border-top:1px solid #e8edf5;
+  text-align:center;
+  color:#98a7c4;
+  font-size:14px;
+  padding:18px 8%;
+}
+.section6 .copyright a{
+  color:#98a7c4;
+  text-decoration:none;
+}
+.section6 .copyright a:hover{
+  text-decoration:underline;
+}
+
+/* Small screens (keeps it tidy) */
+@media (max-width: 900px){
+  .section6 .cta-bar{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .section6 .footer-links{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 560px){
+  .section6 .footer-links{
+    grid-template-columns: 1fr;
+  }
+  .section6 .cta-bar h3{
+    font-size:28px;
+  }
+}
+
+
+
   </style>
 </head>
 <body>
@@ -213,7 +481,6 @@
         <span class="be">BE</span>
         <span class="pill">SURFING</span>
       </div>
-
       <ul class="menu">
         <li><a href="#">HOME</a></li>
         <li><a href="#">ABOUT</a></li>
@@ -221,33 +488,39 @@
         <li><a href="#">SCHOOL</a></li>
         <li><a href="#">CONTACT</a></li>
       </ul>
-
       <a class="buy" href="#">BUY NOW</a>
     </nav>
+   <div class="hero-text">
+  <h1>
+    HAWAII<br>
+    BESURFING<br>
+    RESORT
+  </h1>
+  <p>
+    SPEND YOUR VACATION<br>
+    WITH US
+  </p>
+</div>
 
-    <div class="hero-text">
-      <h1>HAWAII BESURFING RESORT</h1>
-      <p>SPEND YOUR VACATION WITH US</p>
-    </div>
   </div>
 
-  <!-- SECOND SECTION -->
+  <!-- SECOND SECTION (image left, white card right) -->
   <div class="section">
     <div class="left">
       <img src="surfing3.jpg" alt="Sun and Big Waves">
     </div>
-
     <div class="right">
       <h2>SUN &amp; BIG WAVES</h2>
-      <h3>Surfing , an amazing sport for tourists</h3>
+      <h3>Comfort and performance tailored for you</h3>
       <p>
-       Surfing is a surface water sport in which an individual, 
-       a surfer (or two in tandem surfing), uses a board to ride on
-        the forward section, or face, of a moving wave of water, 
-        which usually carries the surfer towards the shore. Waves suitable 
-        for surfing are primarily found on ocean shores, but can also be
-         found as standing waves in the open ocean, in lakes, in rivers
-          in the form of a tidal bore, or wave pools. 
+      Through our shared connection, we begin new journeys together.
+      Live with confidence and stay strong in life.
+      Don’t be afraid of challenges.
+      Keep improving yourself and keep moving forward.
+      Success comes with patience and determination.
+      Believe in your efforts and trust the process.
+      Every step you take brings you closer to your goals.
+
       </p>
       <a href="#" class="button">Read more</a>
     </div>
@@ -258,18 +531,142 @@
     <div class="left">
       <h4>RENT A BOAT</h4>
       <p>
-        To rent a boat you have to contact the manager, 
-        select the type of boat you want to rent and pay 
-        the half amount first. Also, selecting the 
-        timing of your activity is crucial while renting.
+        To rent a boat, contact our manager, choose the boat type you want,
+        and pay half the amount in advance. Selecting the right time
+        for your activity is also important when booking.
       </p>
       <a href="#" class="button">Read more</a>
     </div>
-
     <div class="Right">
-      <img src="surfing4.jpg" alt="RENT A BOAT">
+      <img src="image.png" alt="RENT A BOAT">
     </div>
   </div>
+
+ <section class="section4">
+  
+  <div class="left-video">
+    <img src="image copy.png" alt="Surfing Video"> <!-- Your image here -->
+  </div>
+
+  <div class="right-video">
+    <div class="wave"></div>
+    <h4>WATCH A VIDEO</h4>
+
+    <p>
+      Watch a short presentation of our resort, meet the instructors,
+      and see how our lessons work on the beach and in the water.
+      You’ll get a feel for the atmosphere before you arrive.
+    </p>
+
+    <p>
+      The video also covers safety basics, equipment setup,
+      and a quick tour of our facilities so you know exactly what to expect.
+    </p>
+
+    <a href="#" class="button">Check The Video Presentation</a>
+  </div>
+
+  <section class="section5">
+  <div class="container">
+
+    <h2>CLOSER LOOK AT OUR RESORT</h2>
+    <p class="subtitle">A handmade boards made with passion for people with passion</p>
+
+    <div class="features">
+
+      <div class="feature-box">
+        <span class="icon">⭐</span>
+        <h3>Premium quality</h3>
+        <p>Carefully crafted boards and gear designed for comfort, stability, and performance in all conditions.</p>
+      </div>
+
+      <div class="feature-box">
+        <span class="icon">👥</span>
+        <h3>Friendly community</h3>
+        <p>Learn with supportive instructors and connect with fellow surfers of every skill level.</p>
+      </div>
+
+      <div class="feature-box">
+        <span class="icon">↩</span>
+        <h3>Flexible options</h3>
+        <p>From beginner lessons to advanced sessions—rentals, courses, and custom plans that fit your goals.</p>
+      </div>
+
+      <div class="feature-box">
+        <span class="icon">💚</span>
+        <h3>Love the ocean</h3>
+        <p>We respect the sea and teach responsible surfing that protects our beaches and wildlife.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+   
+<!-- SECTION 6 -->
+<section class="section6">
+
+  <!-- Top call-to-action bar -->
+  <div class="cta-bar">
+    <h3>SPEND YOUR VACATION WITH US</h3>
+    <a href="#" class="cta-btn">Contact us</a>
+  </div>
+
+  <!-- Footer style link columns -->
+  <div class="footer-links">
+    <div class="col">
+      <h4>Shortcut links</h4>
+      <ul>
+        <li><a href="#">Getting started</a></li>
+        <li><a href="#">Pricing & rentals</a></li>
+        <li><a href="#">Lessons & school</a></li>
+        <li><a href="#">Contact & support</a></li>
+      </ul>
+    </div>
+
+    <div class="col">
+      <h4>Our mission</h4>
+      <ul>
+        <li><a href="#">Craftsmanship & quality</a></li>
+        <li><a href="#">Sustainability practices</a></li>
+        <li><a href="#">Community & events</a></li>
+        <li><a href="#">Safety standards</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press & media</a></li>
+        <li><a href="#">Partners</a></li>
+      </ul>
+    </div>
+
+    <div class="col">
+      <h4>About us</h4>
+      <ul>
+        <li><a href="#">Who we are</a></li>
+        <li><a href="#">Our team</a></li>
+        <li><a href="#">Locations</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="col">
+      <h4>Departments</h4>
+      <ul>
+        <li><a href="#">Surf School</a></li>
+        <li><a href="#">Rentals</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Support Center</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Copyright strip -->
+  <div class="copyright">
+    © 2025 Betheme by <a href="#">Muffin group</a> | All Rights Reserved | Powered by <a href="#">WordPress</a>
+  </div>
+</section>
+
+
 
 </body>
 </html>
