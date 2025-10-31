@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Be Surfing – CV Page (Pure HTML/CSS)</title>
+<style>
+  :root{
+    --brand-aqua:#20e6e6;
+    --brand-purple:#4B2B5B;
+    --text-muted:#6b6b6b;
+    --card-bg:#f9fbff;
+    --card-border:#e8edf5;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#fff;}
+
+  /* ===== Purple Header (no framework) ===== */
+  .topbar{
+    position:sticky;top:0;z-index:1000;
+    background:var(--brand-purple);color:#fff;width:100%;
+    box-shadow:0 2px 8px rgba(0,0,0,.12);
+  }
+  .topbar .wrap{
+    max-width:1200px;margin:0 auto;padding:12px 28px;
+    display:flex;align-items:center;gap:24px;
+  }
+  .brand{
+    display:flex;align-items:center;gap:10px;
+    font-weight:800;letter-spacing:.25em;text-transform:uppercase;white-space:nowrap;
+  }
+  .brand .be{color:var(--brand-aqua);}
+  .brand .pill{
+    display:inline-block;line-height:1;padding:.25rem 1.5rem;
+    border-radius:999px;border:4px solid var(--brand-aqua);
+  }
+  .menu{list-style:none;margin:0 auto;padding:0;display:flex;gap:36px;}
+  .menu a{color:#fff;text-decoration:none;font-weight:800;text-transform:uppercase;letter-spacing:.25em;font-size:16px;}
+  .menu a:hover{opacity:.85;}
+  .buy{color:var(--brand-aqua);font-weight:900;text-transform:uppercase;letter-spacing:.25em;text-decoration:none;font-size:16px;}
+  @media(max-width:900px){
+    .topbar .wrap{flex-wrap:wrap;gap:10px 18px;}
+    .menu{order:3;width:100%;justify-content:center;flex-wrap:wrap;gap:18px 26px;padding-bottom:6px;}
+  }
+
+  /* ===== CV (vertical, CSS-only hover reveal) ===== */
+  .cv{width:100%;background:#fff;color:var(--brand-purple);padding:60px 8%;}
+  .cv .cv-headline{text-align:center;margin:0 0 24px;}
+  .cv .cv-headline h2{margin:0;font-size:40px;letter-spacing:.15em;text-transform:uppercase;}
+
+  .cv-list{
+    max-width:800px;margin:0 auto;
+    display:flex;flex-direction:column;gap:16px;
+  }
+  .cv-item{
+    background:var(--card-bg);
+    border:1px solid var(--card-border);
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 16px rgba(0,0,0,.03);
+    transition:box-shadow .25s ease;
+  }
+  .cv-title{
+    padding:18px 22px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
+    position:relative;cursor:default;user-select:none;
+  }
+  .cv-title::after{
+    content:"+";position:absolute;right:20px;top:50%;
+    transform:translateY(-50%);font-weight:900;
+  }
+
+  /* Hidden by default */
+  .cv-content{
+    max-height:0;opacity:0;padding:0 22px;overflow:hidden;
+    transition:max-height .4s ease,opacity .35s ease,padding .35s ease;
+    color:#444;line-height:1.8;
+  }
+
+  /* Reveal on hover (CSS only) */
+  .cv-item:hover .cv-content{
+    max-height:520px;opacity:1;padding:16px 22px 22px;
+  }
+  .cv-item:hover .cv-title{
+    box-shadow:inset 0 -2px 0 var(--brand-aqua);
+  }
+  .cv-item:hover .cv-title::after{content:"–";}
+
+  /* ===== Footer (unchanged styles, no framework) ===== */
+  .section6{background:#fff;color:var(--brand-purple);width:100%;}
+  .section6 .cta-bar{
+    background:#6efaf0;display:flex;align-items:center;justify-content:space-between;
+    gap:20px;padding:28px 8%;
+  }
+  .section6 .cta-bar h3{margin:0;font-size:36px;letter-spacing:.15em;}
+  .section6 .cta-bar .cta-btn{
+    background:#fff;color:var(--brand-purple);text-decoration:none;
+    padding:12px 24px;border-radius:8px;font-weight:600;
+    box-shadow:0 0 0 2px rgba(0,0,0,0.04) inset;
+  }
+  .section6 .footer-links{
+    width:84%;margin:50px auto 60px;
+    display:grid;grid-template-columns:repeat(4,1fr);gap:40px 60px;
+  }
+  .section6 .footer-links .col h4{margin:0 0 16px;font-size:20px;font-weight:700;}
+  .section6 .footer-links ul{list-style:none;padding:0;margin:0;}
+  .section6 .footer-links li{margin:10px 0;position:relative;padding-left:14px;}
+  .section6 .footer-links li::before{content:"▸";position:absolute;left:0;top:0;color:#7096d6;}
+  .section6 .footer-links a{color:#7096d6;text-decoration:none;}
+  .section6 .footer-links a:hover{text-decoration:underline;}
+  .section6 .copyright{
+    border-top:1px solid #e8edf5;text-align:center;color:#98a7c4;
+    font-size:14px;padding:18px 8%;
+  }
+  .section6 .copyright a{color:#98a7c4;text-decoration:none;}
+  .section6 .copyright a:hover{text-decoration:underline;}
+  @media(max-width:900px){
+    .section6 .cta-bar{flex-direction:column;align-items:flex-start;}
+    .section6 .footer-links{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:560px){
+    .section6 .footer-links{grid-template-columns:1fr;}
+    .section6 .cta-bar h3{font-size:28px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <span class="be">BE</span>
+      <span class="pill">SURFING</span>
+    </div>
+    <ul class="menu">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">ABOUT</a></li>
+      <li><a href="#">RENT A BOARD</a></li>
+      <li><a href="#">SCHOOL</a></li>
+      <li><a href="#">CONTACT</a></li>
+    </ul>
+    <a class="buy" href="#">BUY NOW</a>
+  </div>
+</header>
+
+<!-- CV (subtitle line removed) -->
+<section id="cv" class="cv">
+  <div class="cv-headline">
+    <h2>Personal CV</h2>
+  </div>
+
+  <div class="cv-list">
+    <div class="cv-item">
+      <div class="cv-title">Personal Information</div>
+      <div class="cv-content">
+        <p><strong>Name:</strong> Your Name</p>
+        <p><strong>Location:</strong> City, Country</p>
+        <p><strong>Email:</strong> you@example.com</p>
+        <p><strong>Portfolio:</strong> example.com</p>
+      </div>
+    </div>
+
+    <div class="cv-item">
+      <div class="cv-title">Education</div>
+      <div class="cv-content">
+        <p><strong>BS – Computer Science</strong>, Your University (2021–2025)</p>
+        <p>Relevant Courses: Web Technologies, Data Structures, DBMS, OOP.</p>
+      </div>
+    </div>
+
+    <div class="cv-item">
+      <div class="cv-title">Skills</div>
+      <div class="cv-content">
+        <ul>
+          <li>HTML, CSS, Responsive Layouts</li>
+          <li>JavaScript (ES6+)</li>
+          <li>Git & GitHub workflow</li>
+          <li>UI/UX basics, accessibility</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cv-item">
+      <div class="cv-title">Experience / Projects</div>
+      <div class="cv-content">
+        <p><strong>Be Surfing Landing Page</strong> — Multi-section responsive site.</p>
+        <p><strong>FakeStore CRUD (mini)</strong> — List/create/edit/delete with fetch &amp; jQuery.</p>
+      </div>
+    </div>
+
+    <div class="cv-item">
+      <div class="cv-title">Contact Information</div>
+      <div class="cv-content">
+        <p><strong>Email:</strong> you@example.com</p>
+        <p><strong>Phone:</strong> +92-xxx-xxx-xxxx</p>
+        <p><strong>LinkedIn:</strong> linkedin.com/in/yourprofile</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<section class="section6">
+  <div class="cta-bar">
+    <h3>SPEND YOUR VACATION WITH US</h3>
+    <a href="#" class="cta-btn">Contact us</a>
+  </div>
+
+  <div class="footer-links">
+    <div class="col">
+      <h4>Shortcut links</h4>
+      <ul>
+        <li><a href="#">Getting started</a></li>
+        <li><a href="#">Pricing & rentals</a></li>
+        <li><a href="#">Lessons & school</a></li>
+        <li><a href="#">Contact & support</a></li>
+      </ul>
+    </div>
+
+    <div class="col">
+      <h4>Our mission</h4>
+      <ul>
+        <li><a href="#">Craftsmanship & quality</a></li>
+        <li><a href="#">Sustainability practices</a></li>
+        <li><a href="#">Community & events</a></li>
+        <li><a href="#">Safety standards</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press & media</a></li>
+        <li><a href="#">Partners</a></li>
+      </ul>
+    </div>
+
+    <div class="col">
+      <h4>About us</h4>
+      <ul>
+        <li><a href="#">Who we are</a></li>
+        <li><a href="#">Our team</a></li>
+        <li><a href="#">Locations</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="col">
+      <h4>Departments</h4>
+      <ul>
+        <li><a href="#">Surf School</a></li>
+        <li><a href="#">Rentals</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Support Center</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="copyright">
+    © 2025 Betheme by <a href="#">Muffin group</a> | All Rights Reserved | Powered by <a href="#">WordPress</a>
+  </div>
+</section>
+
+</body>
+</html>
