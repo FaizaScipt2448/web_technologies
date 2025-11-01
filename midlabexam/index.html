@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Be Surfing – CV Page (Pure HTML/CSS)</title>
+<title>Be Surfing – CV Page </title>
 <style>
   :root{
     --brand-aqua:#20e6e6;
@@ -15,7 +15,7 @@
   *{box-sizing:border-box}
   body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#fff;}
 
-  /* ===== Purple Header (no framework) ===== */
+
   .topbar{
     position:sticky;top:0;z-index:1000;
     background:var(--brand-purple);color:#fff;width:100%;
@@ -43,7 +43,6 @@
     .menu{order:3;width:100%;justify-content:center;flex-wrap:wrap;gap:18px 26px;padding-bottom:6px;}
   }
 
-  /* ===== CV (vertical, CSS-only hover reveal) ===== */
   .cv{width:100%;background:#fff;color:var(--brand-purple);padding:60px 8%;}
   .cv .cv-headline{text-align:center;margin:0 0 24px;}
   .cv .cv-headline h2{margin:0;font-size:40px;letter-spacing:.15em;text-transform:uppercase;}
@@ -69,14 +68,13 @@
     transform:translateY(-50%);font-weight:900;
   }
 
-  /* Hidden by default */
+ 
   .cv-content{
     max-height:0;opacity:0;padding:0 22px;overflow:hidden;
     transition:max-height .4s ease,opacity .35s ease,padding .35s ease;
     color:#444;line-height:1.8;
   }
 
-  /* Reveal on hover (CSS only) */
   .cv-item:hover .cv-content{
     max-height:520px;opacity:1;padding:16px 22px 22px;
   }
@@ -85,7 +83,7 @@
   }
   .cv-item:hover .cv-title::after{content:"–";}
 
-  /* ===== Footer (unchanged styles, no framework) ===== */
+
   .section6{background:#fff;color:var(--brand-purple);width:100%;}
   .section6 .cta-bar{
     background:#6efaf0;display:flex;align-items:center;justify-content:space-between;
@@ -136,8 +134,9 @@
       <li><a href="#">HOME</a></li>
       <li><a href="#">ABOUT</a></li>
       <li><a href="#">RENT A BOARD</a></li>
-      <li><a href="#">SCHOOL</a></li>
-      <li><a href="#">CONTACT</a></li>
+      <li><a href="#">CHECKOUT</a></li>
+      <li><a href="#">CRUD</a></li>
+       <li><a href="#">CV</a></li>
     </ul>
     <a class="buy" href="#">BUY NOW</a>
   </div>
@@ -153,17 +152,17 @@
     <div class="cv-item">
       <div class="cv-title">Personal Information</div>
       <div class="cv-content">
-        <p><strong>Name:</strong> Your Name</p>
-        <p><strong>Location:</strong> City, Country</p>
-        <p><strong>Email:</strong> you@example.com</p>
-        <p><strong>Portfolio:</strong> example.com</p>
+        <p><strong>Name:</strong> Faiza Sattar</p>
+        <p><strong>Location:</strong> Lahore, Pakistan</p>
+        <p><strong>Email:</strong> faizasattar007@gmail.com</p>
+        <p><strong>Portfolio:</strong> Faizasattar.com</p>
       </div>
     </div>
 
     <div class="cv-item">
       <div class="cv-title">Education</div>
       <div class="cv-content">
-        <p><strong>BS – Computer Science</strong>, Your University (2021–2025)</p>
+        <p><strong>BS – Computer Science</strong>, COMSATS University Lahore  (2021–2025)</p>
         <p>Relevant Courses: Web Technologies, Data Structures, DBMS, OOP.</p>
       </div>
     </div>
