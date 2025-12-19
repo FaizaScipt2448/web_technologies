@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/admin_head", { title: "Admin • Dashboard" }) %>
+
+
+  <body class="admin-body">
+    <div class="admin-layout">
+      <%- include("../partials/sidebar", { active: "dashboard" }) %>
+
+      <main class="admin-content">
+        <%- include("../partials/topbar", { title: "Dashboard" }) %>
+
+        <section class="admin-cards">
+          <div class="admin-card">
+            <h3>Total Products</h3>
+            <p class="admin-big"><%= totalProducts %></p>
+          </div>
+
+          <div class="admin-card">
+            <h3>Quick Actions</h3>
+            <div class="admin-actions">
+              <a class="admin-btn primary" href="/admin/products">View Products</a>
+              <a class="admin-btn" href="/admin/products/new">Add Product</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="admin-card">
+          <h3>Latest Products</h3>
+
+          <% if (!latestProducts || latestProducts.length === 0) { %>
+            <p class="muted">No products yet.</p>
+          <% } else { %>
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% latestProducts.forEach(p => { %>
+                  <tr>
+                    <td><%= p.title %></td>
+                    <td><%= p.category %></td>
+                    <td>$<%= p.price %></td>
+                  </tr>
+                <% }) %>
+              </tbody>
+            </table>
+          <% } %>
+        </section>
+
+        <%- include("../partials/admin_footer") %>
+
+      </main>
+    </div>
+  </body>
+</html>

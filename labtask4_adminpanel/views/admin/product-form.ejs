@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/admin_head", { title: "Admin • Add Product" }) %>
+
+  <body class="admin-body">
+    <div class="admin-layout">
+      <%- include("../partials/sidebar", { active: "products" }) %>
+
+      <main class="admin-content">
+        <%- include("../partials/topbar", { title: "Add Product" }) %>
+
+        <div class="admin-card">
+          <form class="admin-form" method="POST" action="/admin/products">
+            <div class="admin-form-row">
+              <label>Title</label>
+              <input name="title" type="text" required placeholder="Product title" />
+            </div>
+
+            <div class="admin-form-row">
+              <label>Price</label>
+              <input name="price" type="number" step="0.01" required placeholder="e.g. 99.99" />
+            </div>
+
+            <div class="admin-form-row">
+              <label>Category</label>
+              <input name="category" type="text" required placeholder="e.g. electronics" />
+            </div>
+
+            <div class="admin-form-row">
+              <label>Image URL</label>
+              <input name="image" type="text" placeholder="https://..." />
+            </div>
+
+            <div class="admin-form-row">
+              <label>Description</label>
+              <textarea name="description" rows="4" placeholder="Product details..."></textarea>
+            </div>
+
+            <div class="admin-actions">
+              <button class="admin-btn primary" type="submit">Save</button>
+              <a class="admin-btn" href="/admin/products">Cancel</a>
+            </div>
+          </form>
+        </div>
+
+        <%- include("../partials/admin_footer") %>
+      </main>
+    </div>
+  </body>
+</html>

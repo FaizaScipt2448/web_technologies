@@ -1,0 +1,16 @@
+<aside class="admin-sidebar">
+  <div class="admin-logo">
+    <span class="be">BE</span>
+    <span class="pill">ADMIN</span>
+  </div>
+
+  <nav class="admin-nav">
+    <a href="/admin" class="<%= active === 'dashboard' ? 'active' : '' %>">Dashboard</a>
+    <a href="/admin/products" class="<%= active === 'products' ? 'active' : '' %>">Products</a>
+
+    <div class="admin-divider"></div>
+
+    <a href="/crud">Go to CRUD Page</a>
+    <a href="/">Back to Website</a>
+  </nav>
+</aside>

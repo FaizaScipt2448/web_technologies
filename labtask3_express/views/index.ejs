@@ -84,8 +84,8 @@
   position: absolute;
   left: 58%;
   top: 45%;
-   left: 65%;   /* more right */
-  top: 55%;    /* more down */
+   left: 65%;   
+  top: 55%;   
   transform: translate(-50%, -50%);
   color: #ffffff;
   text-align: left;
@@ -109,35 +109,35 @@
 }
 
 
-    /* ============ SECOND SECTION (updated to match screenshot) ============ */
+   
     .section {
       width: 100%;
-      overflow: hidden;                 /* clears floats */
-      background-color: #f3f3f3;        /* light grey bg like screenshot */
+      overflow: hidden;                
+      background-color: #f3f3f3;        
       padding: 20px ;
     }
 
     .section .left {
       float: left;
       width: 65%;
-      text-align: right;                /* push image to the middle edge */
+      text-align: right;               
       box-sizing: border-box;
     }
     .section .left img {
       width: 100%;
       height: auto;
       display: block;
-      margin: 0 0 0 auto;               /* align image to the right edge */
+      margin: 0 0 0 auto;              
     }
 
     .section .right {
       float: right;
       width: 30%;
-      background-color: #ffffff;        /* white card */
+      background-color: #ffffff;        
       padding: 36px 32px;
-      padding-top: 150px;   /* increased vertical space */
+      padding-top: 150px;   
       padding-bottom: 150px;
-      margin-right: 40px;               /* space from page edge */
+      margin-right: 40px;              
       margin-top: 0;
       margin-bottom: 0;
       border-radius: 6px;
@@ -146,13 +146,13 @@
       text-align: center;
     }
     .section .right h2 {
-      color: #4B2B5B;                   /* purple */
+      color: #4B2B5B;                  
       text-transform: uppercase;
       letter-spacing: .1em;
       margin: 6px 0 8px;
     }
     .section .right h3 {
-      color: #9a8fa6;                   /* soft grey-purple */
+      color: #9a8fa6;                
       font-weight: normal;
       margin: 0 0 16px;
     }
@@ -163,7 +163,7 @@
     }
     .section .button {
       display: inline-block;
-      background-color: #1ff5ea;        /* bright aqua */
+      background-color: #1ff5ea;        
       color: #0b0b0b;
       padding: 12px 28px;
       text-decoration: none;
@@ -206,10 +206,10 @@
 
 /* Title */
 .section3 .left h4{
-  color:#4B2B5B;           /* purple */
+  color:#4B2B5B;         
   text-transform: uppercase;
-  letter-spacing:.18em;     /* spaced letters like screenshot */
-  font-size:42px;           /* big */
+  letter-spacing:.18em;     
+  font-size:42px;           
   margin: 0 0 18px;
 }
 
@@ -218,10 +218,10 @@
   color:#666;
   line-height:1.9;
   max-width: 520px;
-  margin: 0 auto 22px;     /* center block of text */
+  margin: 0 auto 22px;    
 }
 
-/* Button (reuse your .button class; ensure it centers) */
+/* Button (reuse your .button class; ensure it centers) *
 .section3 .left .button{
   display:inline-block;
   margin: 10px auto 0;
@@ -245,7 +245,7 @@
 .section3 .Right img {
   width: 100%;
   height: 500px;
-  display: block; /* removes inline spacing */
+  display: block;
   margin:0 16px;  
   display: inline-block;
 }
@@ -311,10 +311,10 @@
   width:100%;
   background-image:url("https://themes.muffingroup.com/be/surfing/wp-content/uploads/2015/07/home_surfing_section_list.jpg");
   background-size:cover;
-  background-position:right center;   /* woman on the right like the demo */
-  padding:120px 0 140px;              /* top/bottom space like screenshot */
+  background-position:right center;   
+  padding:120px 0 140px;             
   color:#4B2B5B;
-  clear:both;                         /* safety clear */
+  clear:both;                       
 }
 
 .section5 .container{
@@ -339,11 +339,11 @@
 .section5 .features{
   display:flex;
   flex-wrap:wrap;
-  gap:60px 80px;            /* row / column gaps */
+  gap:60px 80px;          
 }
 
 .section5 .feature-box{
-  width:42%;                /* two per row */
+  width:42%;               
   display:flex;
   gap:18px;
   align-items:flex-start;
@@ -353,7 +353,7 @@
 .section5 .feature-box .icon{
   font-size:42px;
   line-height:1;
-  color:#20e6e6;            /* aqua icon like the demo */
+  color:#20e6e6;         
 }
 
 .section5 .feature-box h3{
@@ -377,7 +377,7 @@
 
 /* CTA bar */
 .section6 .cta-bar{
-  background:#6efaf0;              /* bright aqua band */
+  background:#6efaf0;            
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -453,7 +453,7 @@
   text-decoration:underline;
 }
 
-/* Small screens (keeps it tidy) */
+
 @media (max-width: 900px){
   .section6 .cta-bar{
     flex-direction:column;
@@ -473,7 +473,6 @@
 }
 
 
-
   </style>
 </head>
 <body>
@@ -486,14 +485,15 @@
         <span class="pill">SURFING</span>
       </div>
       <ul class="menu">
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">RENT A BOARD</a></li>
-        <li><a href="#">SCHOOL</a></li>
-        <li><a href="#">CONTACT</a></li>
-         <li><a href="..Assignment1/checkout.html">Checkout</a></li>
-          <li><a href="#">CRUD</a></li>
-      </ul>
+  <li><a href="/">HOME</a></li>
+  <li><a href="/about">ABOUT</a></li>
+  <li><a href="#">RENT A BOARD</a></li>
+  <li><a href="#">SCHOOL</a></li>
+  <li><a href="#">CONTACT</a></li>
+  <li><a href="/checkout">CHECKOUT</a></li>
+  <li><a href="/crud">CRUD</a></li>
+</ul>
+
       <a class="buy" href="#">BUY NOW</a>
     </nav>
    <div class="hero-text">
@@ -510,10 +510,11 @@
 
   </div>
 
-  <!-- SECOND SECTION (image left, white card right) -->
+ 
   <div class="section">
     <div class="left">
-      <img src="surfing3.jpg" alt="Sun and Big Waves">
+     <img src="/images/surfing3.jpg" alt="Sun and Big Waves">
+
     </div>
     <div class="right">
       <h2>SUN &amp; BIG WAVES</h2>
@@ -544,14 +545,15 @@
       <a href="#" class="button">Read more</a>
     </div>
     <div class="Right">
-      <img src="image.png" alt="RENT A BOAT">
+      <img src="/images/image.png" alt="RENT A BOAT">
     </div>
   </div>
 
  <section class="section4">
   
   <div class="left-video">
-    <img src="home_surfing_hover_box_2.png" alt="Surfing Video"> <!-- Your image here -->
+<img src="/images/home_surfing_hover_box_2.png" alt="Surfing Video">
+
   </div>
 
   <div class="right-video">

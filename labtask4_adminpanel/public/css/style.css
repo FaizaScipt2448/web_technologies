@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* ---------------- NAVBAR ---------------- */
+
+.nav {
+  background: #5b0f53;
+  color: white;
+  padding: 16px 40px;
+
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.be {
+  color: #20e6e6;
+}
+
+.pill {
+  border: 2px solid #20e6e6;
+  padding: 4px 18px;
+  border-radius: 999px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.buy {
+  color: #20e6e6;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+/* ---------------- HERO ---------------- */
+
+.hero-simple {
+  padding: 80px 0;
+  text-align: center;
+  background: #f3f3f3;
+}
+
+.hero-simple h1 {
+  margin: 0;
+  font-size: 42px;
+}
+
+.hero-simple p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* ---------------- CONTENT ---------------- */
+
+.content-block {
+  padding: 40px 15%;
+}
+
+/* ---------------- FOOTER ---------------- */
+
+.footer-section .cta-bar {
+  background: #8a3f96;
+  color: white;
+  padding: 20px 10%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cta-btn {
+  background: #20e6e6;
+  color: #4b2b5b;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 40px 10%;
+  gap: 30px;
+}
+
+.footer-links h4 {
+  margin-bottom: 12px;
+  color: #4b2b5b;
+}
+
+.footer-links a {
+  color: #7096d6;
+  text-decoration: none;
+}
+
+.copy {
+  text-align: center;
+  color: #9a9a9a;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+}
