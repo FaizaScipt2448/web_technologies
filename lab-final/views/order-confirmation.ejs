@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Confirmation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container py-5">
+  <h2 class="mb-3">✅ Order Confirmed (Saved Successfully)</h2>
+  <p class="fs-5">Your Order ID:</p>
+  <div class="alert alert-success"><strong><%= orderId %></strong></div>
+
+  <a class="btn btn-primary" href="/crud">Back to Products</a>
+  <a class="btn btn-outline-secondary" href="/checkout">Go to Checkout</a>
+</body>
+</html>

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Be Surfing - Our Company</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #4b2b5b;
+      background: #ffffff;
+    }
+    a { text-decoration: none; }
+
+  
+.hero-about{
+  position: relative;
+  height: 350px;
+  background: url("/images/home_surfing_subheader.jpg") center/cover no-repeat;
+  color:#fff;
+  overflow:hidden;
+}
+
+
+.hero-about::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.15);
+  pointer-events:none;
+}
+
+
+.nav{
+  position:absolute;
+  top: 12px;              
+  left: 0;                 
+  right: 0;
+  transform: none;          
+  width: 100%;
+  padding: 0 24px;          
+  display:flex;
+  align-items:flex-start;   
+  justify-content: space-between;
+  z-index: 5;
+}
+
+.brand-img{
+   height: 150px;           
+  width:auto;
+  margin-left: -8px;       
+  margin-top: 0; 
+}
+
+.menu{
+  list-style:none;
+  margin: 10px 0 0;
+  padding:0;
+  display:flex;
+  gap: 44px;
+  align-items:center;
+
+  margin-right: 60px;   
+}
+
+
+.menu a{
+  color:#fff;
+  font-size:16px;
+  font-weight:800;
+  letter-spacing:.35em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+
+
+
+.hero-center{
+  position:absolute;
+  left:50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  text-align:center;
+  z-index: 3;
+  width: 90%;
+}
+
+.hero-center h1{
+  margin:0 0 14px;
+  font-size: 64px;
+  font-weight: 800;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+
+   
+    .hero-sep {
+      width: 80px;
+      height: auto;
+      display: inline-block;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-intro {
+      padding: 70px 0 50px;
+      text-align: center;
+    }
+
+    .section-intro p {
+      margin: 0;
+      font-size: 24px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #865b9b;
+      line-height: 1.6;
+    }
+
+    .section-video {
+      padding: 20px 0 80px;
+      text-align: center;
+    }
+
+    .video-box {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto 20px;
+    }
+
+    .video-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .play-circle {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: #20e6e6;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .play-circle span {
+      border-style: solid;
+      border-width: 10px 0 10px 18px;
+      border-color: transparent transparent transparent white;
+      margin-left: 4px;
+    }
+
+    .video-caption {
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #4b2b5b;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .section-hotel {
+      padding: 40px 0 60px;
+    }
+
+    .hotel-row {
+      display: flex;
+      gap: 40px;
+    }
+
+    .hotel-left,
+    .hotel-right { flex: 1; }
+
+    .hotel-left img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .waves-small {
+      width: 70px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .hotel-right h2 {
+      margin: 0 0 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 22px;
+    }
+
+    .hotel-right p {
+      color: #555555;
+      line-height: 1.8;
+      margin-top: 0;
+    }
+
+    .hotel-title {
+      margin-top: 26px;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      font-size: 20px;
+    }
+
+    .hotel-text {
+      color: #555555;
+      line-height: 1.8;
+      margin-top: 10px;
+    }
+
+    .section-why {
+      padding: 20px 0 80px;
+    }
+
+    .why-row {
+      display: flex;
+      gap: 60px;
+      align-items: flex-start;
+    }
+
+    .why-left { flex: 2; }
+    .why-right {
+      flex: 1.3;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .section-heading {
+      text-transform: uppercase;
+      letter-spacing: 0.26em;
+      font-size: 20px;
+      margin: 0 0 16px;
+    }
+
+    .section-text {
+      color: #555555;
+      line-height: 1.8;
+      margin-top: 0;
+      margin-bottom: 14px;
+    }
+
+    .board-img {
+      max-height: 260px;
+      width: auto;
+      align-self: flex-end;
+      margin-top: 20px;
+    }
+
+    .section-footer {
+      background: #8a3f96;
+      color: white;
+      margin-top: 40px;
+    }
+
+    .cta-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 26px 10%;
+    }
+
+    .cta-bar h3 {
+      margin: 0;
+      font-size: 32px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .cta-btn {
+      background: #20e6e6;
+      color: #4b2b5b;
+      padding: 10px 24px;
+      border-radius: 6px;
+      font-weight: bold;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .footer-links {
+      background: #ffffff;
+      color: #4b2b5b;
+      padding: 40px 10% 50px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+
+    .footer-links h4 {
+      margin: 0 0 14px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin: 8px 0;
+      position: relative;
+      padding-left: 14px;
+      font-size: 14px;
+      color: #7096d6;
+    }
+
+    .footer-links li::before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #7096d6;
+    }
+
+    .footer-links a { color: #7096d6; }
+
+    .footer-bottom {
+      background: #ffffff;
+      border-top: 1px solid #e8edf5;
+      text-align: center;
+      font-size: 13px;
+      padding: 14px 0 18px;
+      color: #98a7c4;
+    }
+
+    .footer-bottom a { color: #98a7c4; }
+
+    @media (max-width: 900px) {
+      .hotel-row,
+      .why-row,
+      .cta-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cta-bar h3 {
+        margin-bottom: 12px;
+        font-size: 24px;
+      }
+
+      .footer-links {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .board-img {
+        align-self: center;
+      }
+
+      .hero-center h1 { font-size: 34px; }
+    }
+
+    @media (max-width: 600px) {
+      .footer-links { grid-template-columns: 1fr; }
+      .section-intro p { font-size: 18px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO + NAV -->
+  <div class="hero-about">
+    <nav class="nav">
+      <img src="/images/about7.png" alt="Be Surfing Logo" class="brand-img" />
+
+      <!-- Express routes -->
+      <ul class="menu">
+        <li><a href="/">HOME</a></li>
+        <li><a href="/about">ABOUT</a></li>
+        <li><a href="#">RENT A BOARD</a></li>
+        <li><a href="/checkout">CHECKOUT</a></li>
+        <li><a href="/crud">CRUD</a></li>
+      </ul>
+
+     
+    </nav>
+
+    <div class="hero-center">
+      <h1>OUR COMPANY</h1>
+      
+      <img src="/images/home_surfing_seperator3.png" alt="waves" class="hero-sep" />
+    </div>
+  </div>
+
+ 
+  <section class="section-intro">
+    <div class="container">
+      <p>
+        SED DO EIUSMOD TEMPOR INCIDIDUNT<br />
+        UTL ETDOLORE MAGNA ALIQUA. UT<br />
+        ENIM AD MINIM VENIAM QUIS NOSTRUD
+      </p>
+    </div>
+  </section>
+
+
+  <section class="section-video">
+    <div class="container">
+      <div class="video-box">
+        <img src="/images/surfing hoverbox.jpg" alt="Surfing video collage" />
+        <div class="play-circle"><span></span></div>
+      </div>
+      <div class="video-caption">CHECK THE VIDEO PRESENTATION</div>
+    </div>
+  </section>
+
+ 
+  <section class="section-hotel">
+    <div class="container">
+      <div class="hotel-row">
+        <div class="hotel-left">
+          <img src="/images/about3.jpg" alt="Be Hotel" />
+          <h2 class="hotel-title">BE HOTEL</h2>
+          <p class="hotel-text">
+            Gravida ullamcorper quam. Nullam viverra consectetur. Quisque cursus
+            et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc,
+            accumsan congue. Lorem ipsum primis in nibh vel risus. Sed vel
+            lectus. Ut sagittis, ipsum dolor quam.
+          </p>
+        </div>
+
+        <div class="hotel-right">
+          <img src="/images/home_surfing_seperator3.png" alt="waves" class="waves-small" />
+          <h2>STANDARDS</h2>
+          <p>
+            Architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+            voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+            consequuntur magni dolores eos qui ratione vincidnut ut labore et
+            dolore magnam aliquam quaerat voluptatem.
+          </p>
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum. Sed ut perspiciatis unde omnis iste natus error
+            sit voluptatem accusantium dolorem.
+          </p>
+          <p>
+            Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum. Sed ut
+            perspiciatis unde omnis iste natus error sit voluptatem accusantium
+            dolorem.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section class="section-why">
+    <div class="container">
+      <div class="why-row">
+        <div class="why-left">
+          <h2 class="section-heading">WHY WE DO IT</h2>
+          <p class="section-text">
+            Quia voluptas sit aspernatur aut odit aut fugit, sed quia
+            consequuntur magni dolores eos qui ratione vincidnut ut labore et
+            dolore magnam aliquam quaerat voluptatem.
+          </p>
+          <p class="section-text">
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum. Sed ut perspiciatis
+            unde omnis iste natus error sit voluptatem accusantium doloremque.
+          </p>
+          <p class="section-text">
+            Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum. Sed ut perspiciatis unde omnis iste natus error
+            sit voluptatem accusantium doloremque laudantium, tota.
+          </p>
+        </div>
+
+        <div class="why-right">
+          <h2 class="section-heading">BE SURFING</h2>
+          <p class="section-text">
+            Suspendisse porta justo urna, eget porta orci varius sit amet. Nam
+            lacus mauris, imperdiet ac felis eget, molestie mattis ante!
+            Vestibulum ante ipsum.
+          </p>
+          <p class="section-text">
+            Sed pretium purus quis sapien consequat, eu iaculis nulla mattis.
+            Pellentesque auctor posuere augue in efficitur. Cras commodo dui
+            congue tellus maximus nullam.
+          </p>
+          <img src="/images/about4.png" alt="Be Surfing board" class="board-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section-footer">
+    <div class="cta-bar">
+      <h3>SPEND YOUR VACATION WITH US</h3>
+      <a href="#" class="cta-btn">Contact us</a>
+    </div>
+
+    <div class="footer-links">
+      <div>
+        <h4>Shortcut links</h4>
+        <ul>
+          <li><a href="#">Quent per conubia nostra</a></li>
+          <li><a href="#">Nceptos himenaeos</a></li>
+          <li><a href="#">Mauris in erat</a></li>
+          <li><a href="#">Lustoac</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Our mission</h4>
+        <ul>
+          <li><a href="#">Aenean sollicitudin orem qui</a></li>
+          <li><a href="#">Duis sed odio sit amet nibh</a></li>
+          <li><a href="#">Morbi accumsan ipsum velit</a></li>
+          <li><a href="#">Nam nec tellus</a></li>
+          <li><a href="#">Class aptent taciti sociosqu</a></li>
+          <li><a href="#">Mauris in erat justo</a></li>
+          <li><a href="#">Sed non neque</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>About us</h4>
+        <ul>
+          <li><a href="#">Duis sed odio sit amet nibh</a></li>
+          <li><a href="#">Morbi accumsan ipsum velit</a></li>
+          <li><a href="#">Nam nec tellus</a></li>
+          <li><a href="#">Class aptent taciti sociosqu</a></li>
+          <li><a href="#">Mauris in erat justo</a></li>
+          <li><a href="#">Sed non neque</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Departments</h4>
+        <ul>
+          <li><a href="#">Nam nec tellus</a></li>
+          <li><a href="#">Class aptent taciti sociosqu</a></li>
+          <li><a href="#">Mauris in erat justo</a></li>
+          <li><a href="#">Sed non neque</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Betheme by <a href="#">Muffin group</a> | All Rights Reserved | Powered by
+      <a href="#">WordPress</a>
+    </div>
+  </section>
+
+</body>
+</html>
